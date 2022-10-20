@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用戶註冊</title>
+    <!-- 引入favicon图标 -->
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <!-- 引入初始化css -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- 引入樣式 -->
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <div class="w">
+       <header class="header">
+          <div class="logo">
+              <a href="index(me).html"><img src="images/logo.png" alt=""></a>
+          </div> 
+       </header>
+       <div class="registerarea">
+           <h3>註冊新用戶
+             <div class="login">我有賬號，去<a href="#" >登錄</a>！</div>   
+           </h3>
+        <div class="reg_form">
+            <form action="">
+                <ul>
+                    <li><label for="tel">手機號：</label><input type="text" id="tel" class="inp">
+                        <span class="tel_error"><i class="error_icon"></i>格式不正確，請輸入8位電話號碼。</span>
+                        <span class="tel_success"><i class="success_icon"></i>格式正確</span> 
+                    
+                    </li>
+
+                    <li><label for="sms">短信密碼：</label><input type="text" id="sms" class="inp">
+                        <span class="sms_success"><i class="success_icon"></i>驗證碼輸入正確。</span></li>
+
+                    <li><label for="pw">登錄密碼：</label><input type="password" id="pw" class="inp inp_pw"></li>
+
+                    <li class="safe">安全程度 <em class="weak">弱</em> <em class="middle">中</em> <em class="strong">強</em></li>
+                    <li><label for="confirm">確認密碼：</label><input type="text" id="confirm" class="inp"></li>
+                    <li class="agree"><i><input type="checkbox"></i> 同意協議並註冊。<a href="#">《知曉用戶協議》</a></li>
+                    <li><input type="submit" value="提交註冊" class="btn"></li>
+                </ul>
+            </form>
+        </div>
+        <script>
+            var tel = document.querySelector('.inp');
+            var tel_error = document.querySelector('.tel_error');
+            var tel_success = document.querySelector('.tel_success');
+            tel.addEventListener('blur',function(){
+                if(this.value.length == 8){
+                tel_success.style.display='inline-block'
+                tel_error.style.display ='none'
+
+                } else {
+                    tel_success.style.display='none'
+                    tel_error.style.display = 'inline-block'                    
+                }
+            }) 
+            
+            var pw = document.querySelector('.inp_pw')
+            var weak = document.querySelector('.weak')
+            var middle = document.querySelector('.middle')
+            var strong = document.querySelector('.strong')
+            pw.addEventListener('input',function(){
+                if(this.value.length <= 5){
+                    weak.style.display='inline-block';
+                } else if (this.value.length <= 8 && this.value.length > 5 ){
+                    weak.style.display='none';
+                    middle.style.display='inline-block';
+                } else {
+                    weak.style.display='none';
+                    middle.style.display='none';
+                    strong.style.display='inline-block';
+                } 
+            })
+        </script>
+       </div>
+       <div class="footer">
+        <div class="mod_copyright">
+            <div class="links">
+             <a href="#">關於我們</a> | <a href="#">聯繫我們</a> | <a href="#">聯繫客服</a> | <a href="">商家入駐</a>  | <a href="#">營銷中心</a> | <a href="#">手機品優購</a> | <a href="#">友情鏈接</a> | <a href="#">銷售聯盟</a> | <a href="#">品優購社區</a> | <a href="#">品優購公益</a> | <a href="#">English Site</a> | <a href="#">Contact US</a> 
+            </div>
+           <div class="copyright">
+            <p>
+                地址：北京市昌平區建材城西路金燕龍辦公樓一層 郵編：100096 電話：400-618-4000 傳真：010-82935100 郵箱: zhanghj+itcast.cn</p>
+                京ICP備08001421號京公網安備11010800770
+           </div>
+       </div>
+    </div> 
+</body>
+</html>
