@@ -1,0 +1,469 @@
+.main {
+    width: 980px;
+    height: 455px;
+    margin-left: 220px;
+    margin-top: 10px;
+    
+}
+
+.focus {
+    float: left;
+    width: 721px;
+    height: 455px;
+    background-color: azure;
+}
+
+.newsflash {
+    float: right;
+    width: 250px;
+    height: 455px;
+}
+
+.newsflash .news {
+    height: 165px;
+    border: 1px solid #e4e4e4;
+}
+
+.news .news_hd {
+    height: 33px;
+    border-bottom: 1px dotted #e4e4e4;
+    padding: 0 15px;
+    line-height: 33px;
+}
+
+.news_hd h5{
+    float: left;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.news_hd .more {
+    float: right;
+}
+
+.news_hd .more::after {
+    font-family: 'icomoon';
+    content: '\e920';
+}
+
+.news_bd ul li{
+    height: 24px;
+    line-height: 24px;
+    /* 設置溢出文字以省略號顯示 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    
+}
+
+.news_bd {
+    margin: 5px 15px 0px;
+}
+
+
+.newsflash .lifeservice {
+    /* 隱藏掉ul超出lifeservice的部分 */
+    overflow: hidden;
+    height: 209px;
+    border: 1px solid #e4e4e4;
+    border-top: 0;
+
+}
+
+.lifeservice ul {
+    /* 需改成li*4的寬度，以在一行內裝下4個li */
+    width: 252px;
+}
+
+.lifeservice ul li {
+    position: relative;
+    float: left;
+    width: 63px;
+    height: 71px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    text-align: center;
+
+}
+
+.lifeservice ul li i {
+    /* 把i轉換成行內塊，，以設置高寬 */
+    display: inline-block;
+    width: 24px;
+    height: 28px;
+    margin-top: 12px;
+    background:url(../images/icons.png) -19px -15px
+}
+
+.lifeservice ul :nth-child(2) i {
+    background:url(../images/icons.png) no-repeat -80px -15px !important
+}
+.lifeservice ul :nth-child(3)  i {
+    background:url(../images/icons.png) no-repeat -142px -15px !important
+}
+.lifeservice ul :nth-child(4) i {
+    background:url(../images/icons.png) -206px -15px !important
+}
+.lifeservice ul :nth-child(5)  i {
+    background:url(../images/icons.png) -19px -84px !important
+}
+.lifeservice ul :nth-child(6)  i {
+    background:url(../images/icons.png) -79px -84px
+}
+.lifeservice ul :nth-child(7)  i {
+    background:url(../images/icons.png) -142px -84px
+}
+.lifeservice ul :nth-child(8)  i {
+    background:url(../images/icons.png) -206px -84px
+}
+.lifeservice ul :nth-child(9)  i {
+    background:url(../images/icons.png) -19px -155px
+}
+.lifeservice ul :nth-child(10)  i {
+    background:url(../images/icons.png) -79px -155px
+}
+.lifeservice ul :nth-child(11)  i {
+    background:url(../images/icons.png) -142px -155px
+}
+.lifeservice ul :nth-child(12)  i {
+    background:url(../images/icons.png) -206px -155px
+}
+
+.lifeservice ul li img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.newsflash .bargain {
+    margin-top: 5px;
+}
+
+/* 推薦模塊 */
+.recom {
+    height: 163px;
+    margin-top: 12px;
+    background-color: #ebebeb;
+}
+
+.recom_hd {
+    float: left;
+    width: 205px;
+    height: 163px;
+    background-color: #5c5251;
+    padding-top: 30px;
+    text-align: center;
+    
+}
+
+.recom_bd ul li {
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.recom_bd ul li img:hover{
+    transform: translateY(-5px);
+}
+
+
+.recom_bd ul li img {
+    /* 給圖片設置大小，以免以後上傳圖片過大過小，打亂佈局 */
+    width: 248px;
+    height: 163px;
+    transition: all 0.2s ease-in;
+}
+
+/* 只要前三個li後面需要有豎線，最後一個不用。-n+3 = 前3個 */
+.recom_bd ul li:nth-child(-n+3)::after {
+    content: '';
+    /* 需要壓住圖片，因此需要定位 */
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 1px;
+    height: 145px;
+    background-color: #ddd;
+}
+
+/* floor開始 */
+
+.floor {
+    margin-top: 30px;
+}
+.floor .box_hd {
+    margin-top: 10px;
+    height: 30px;
+    border-bottom: 2px solid #c81623;
+}
+
+.floor .box_hd h3 {
+    float: left;
+    font-size: 18px;
+    color: #c81623;
+    font-weight: 400;
+}
+
+.floor .box_hd .tab_list ul{
+   float: right;
+   line-height: 30px;
+}
+
+.tab_list ul li {
+    float: left;
+}
+
+.tab_list ul li a {
+    margin: 0 15px;
+}
+.floor .box_bd {
+    height: 361px;
+}
+
+.box_bd img{
+    transition: all 0.2s ease-in;
+}
+
+.box_bd img:hover {
+    transform: translateX(-5px);
+}
+
+.tab_content_item>div {
+    float: left;
+}
+
+.col_210 {
+    width: 210px;
+    height: 361px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.col_210 ul {
+    padding-left: 12px;
+}
+
+.col_210 ul li {
+    float: left;
+    width: 85px;
+    height: 34px;
+    margin-right: 10px;
+    line-height: 34px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.col_210_img{
+    transition: all 0.2s ease;
+}
+
+.col_210 .col_210_img:hover {
+  transform: scaleX(2px);
+}
+
+.col_329 {
+    position: relative;
+    width: 329px;  
+    height: 360px;
+    background: #aed6d8;
+    text-align: center;
+
+}
+
+.col_329_text {
+    position: absolute;
+    top: 40px;
+    left: 30px;
+}
+
+.col_329_img  {   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -80px 0 0 -90px;   
+}
+
+.col_221 {
+    width: 221px;
+    border-right: 1px solid #ccc;
+}
+.col_219 {
+    width: 219px;
+}
+
+.bb {
+    /* 一般情況下，a如果包含有寬度的盒子，a需要轉換為塊級元素 */
+    display: block;
+    border-bottom: 1px solid #ccc;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.floor_nav {
+    position:sticky;
+    float: left;
+    top: 240px;
+    height: 300px;
+    width: 28px;
+    text-align: center;
+}
+    
+.floor_nav>ul>li{
+    border: 1px solid #ccc;
+    border-collapse:collapse;
+    font-size: 16px;
+    color: #c81623;
+}
+
+.floor2,.floor3,.floor4{
+    display: none;
+}
+
+.brand {
+    position: relative;
+    height: 66px;
+    margin: 20px auto 20px;
+    
+}
+
+.brand a {
+    position: relative;
+    float: left;
+    display: block;
+    width: 120px;
+    height: 66px;   
+    text-align: center;
+    line-height: 66px;
+    background-color: #f7f7f7;
+
+}
+
+.brand a img {
+    transition: all 0.2s ease-in;
+}
+.brand a img:hover{
+    transform: translateY(-5px);
+}
+
+.brand a span {
+    position: absolute;
+    right: 0;
+    top: 13px;
+    display: inline-block;
+    width: 1px;
+    height: 40px;
+    border: 1px dashed #cecece;
+    
+}
+
+.interest {
+    margin: 30px auto 20px 
+}
+
+.interest .interest_hd h3{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.interest_bd {
+    margin-top: 8px;
+    height: 408px;
+    border: 1px solid #ededed;
+}
+
+.interest_bd img{
+    transition: all 0.2s ease-in;
+}
+
+.interest_bd img:hover{
+    transform: translateY(-5px);
+}
+.interest_bd a {
+    float: left;
+    display: block; 
+ 
+}
+
+.interest_bd_gd {
+    float: left;
+    width: 226px;
+    height: 406px;
+    overflow: hidden;
+} 
+
+.interest_bd_gd p{
+    font-size: 16px;
+    text-align: center;
+    border-bottom: 1px dashed #ededed;
+    margin: 12px 12px 0 10px;
+    padding-bottom: 12px;
+    
+}
+
+.interest_bd_cook {
+    float: left;
+    overflow: hidden;
+    width: 405px;
+    height: 406px;
+    background: #f7f7f7;
+} 
+
+
+.interest_bd_cook p{
+    font-size: 16px;
+    text-align: center;
+    padding: 12px 20px 10px 30px;
+    background: #f7f7f7;
+    border-bottom: 1px dashed #ededed;
+}
+
+.interest_bd_brand {
+    width: 162px;
+    height: 406px;
+    padding: 2px 0 0 10px;
+    overflow: hidden
+}
+.interest_bd_brand ul li{
+    display: block;
+    
+}
+
+.interest_bd_brand ul li:nth-child(odd) {
+    float: left;
+    width: 75px;
+    height: 58px;
+    padding-top: 16px;
+    border-bottom: 1px dashed #e0e0e0;  
+}
+
+
+.interest_bd_brand ul li:nth-child(even){
+    float: right;
+    width: 77px;
+    height: 58px;
+    padding-top: 16px;
+    padding-left: 5px;
+    border-left: 1px dashed #e0e0e0;
+    border-bottom: 1px dashed #e0e0e0;  
+}
+
+.interest_bd_brand ul li a img{
+    width: 64px;
+    height: 32px;
+}
+
+
+
+
+
+
+
+

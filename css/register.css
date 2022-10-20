@@ -1,0 +1,170 @@
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    height: 84px;
+    
+    border-bottom: 2px solid  #c81523 ;
+}
+
+.logo {
+    /* 此處不能用margin-top,因會引起外邊距塌陷 */
+    padding-top: 18px;
+}
+
+.registerarea {
+    height: 522px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+.registerarea h3 {
+    height: 42px;
+    border-bottom: 1px solid #ccc;
+    background-color: #ececec;
+    padding: 0 10px;
+    line-height: 42px;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.registerarea .login {
+    float: right;
+    line-height: 42px;
+    font-size: 14px;
+
+}
+
+.login a {
+    color: #c81523;
+}
+
+.reg_form {
+    width: 600px;
+    margin: 50px auto 0;
+}
+
+.reg_form ul li {
+    margin-bottom: 20px;
+    
+}
+
+.reg_form ul li label {
+    display: inline-block;
+    width: 88px;
+    text-align: right;
+}
+
+.reg_form ul li .inp {
+    display: inline-block;
+    width: 220px;
+    height: 37px;
+    border: 1px solid #ccc;
+}
+
+.tel_error {
+    display: inline-block;
+    display: none;
+    color: #c81523;
+}
+
+.error_icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin: -2px 5px 0;
+    width: 20px;
+    height: 20px;
+    background: url(../images/error.png) no-repeat center;
+}
+
+
+.tel_success {
+    display: inline-block;
+    display: none;
+    color: green;
+}
+
+.sms_success {
+    display: none;
+}
+
+.pw_error {
+    display: none;
+    color: #c81523;
+}
+.pw_success {
+    color: green;
+}
+.success_icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin: -2px 5px 0;
+    width: 20px;
+    height: 20px;
+    background: url(../images/success.png) no-repeat center;
+
+}
+
+.safe {
+    padding-left: 221px;
+}
+.safe em {
+    padding: 0 12px;
+    color: white;
+}
+
+.safe .weak {
+    display: none;
+    background-color: #de1111;
+}
+
+.safe .middle {
+    display: none;
+    background-color: #f79100;
+}
+
+.safe .strong {
+    display: none;
+    background-color: #40b83f;
+}
+
+.agree {
+    padding-left: 88px;
+}
+.agree input {
+    vertical-align: middle;
+}
+
+.agree a {
+    color: #1ba1e6;
+}
+
+.btn {
+    width: 200px;
+    height: 34px;
+    margin: 30px 0 0 100px;
+    background-color: #c81623;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.mod_copyright {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.mod_copyright .links {
+    margin-bottom: 15px;
+}
+
+.mod_copyright .links a {
+    margin:0 3px
+}
+
+
+.mod_copyright .copyright {
+    line-height: 20px;
+}

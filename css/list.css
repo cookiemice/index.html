@@ -1,0 +1,92 @@
+
+.sk {
+    position: absolute;
+    left: 190px;
+    top: 40px;
+    border-left: 2px solid #c81523;
+    padding: 3px 0 0 14px;
+
+}
+
+.sk_list {
+    float: left;
+}
+
+.sk_list ul li {
+    float: left;
+}
+
+.sk_list ul li a {
+    display: block;
+    line-height: 47px;
+    padding: 0 30px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #000;
+}
+
+
+
+.sk_con {
+    float: left;
+}
+
+.sk_con ul li {
+    float:left
+}
+
+.sk_con ul li a {
+    display: block;
+    /* 行高大於盒子高度（47px),文字會下移 */
+    line-height: 49px;
+    padding: 0 20px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.nav {
+    /* 因為上面的行高為49px,大於盒子的47px，為免影響佈局，需要把多出的部分切掉 */
+    overflow: hidden;
+}
+
+
+/* 在最後一個li的a後面加上符號 */
+.sk_con ul li:last-child a::after{
+    content: '\e91e';
+    font-family: 'icomoon';
+}
+
+.sk_bd {
+    margin-bottom: 30px;
+}
+
+.sk_bd ul li {
+    /* 因圖片本身寬度等於或超過290px，會遮住邊框，因此切掉多出部分 */
+    overflow: hidden;
+    float: left;
+    width: 290px;
+    height: 460px;
+    margin-right: 13px;
+    /* 預先設置一個透明的邊框，在鼠標經過時變成紅色 */
+    /* 若只在hover里添加紅色邊框，鼠標經過時，因邊框產生的原因，li會移動 */
+    border: 1px solid transparent;
+}
+
+/* 每行的第4個li，不需要右邊框 */
+.sk_bd ul li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.sk_bd ul li:hover {
+    border: 1px solid #c81523;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+
+
